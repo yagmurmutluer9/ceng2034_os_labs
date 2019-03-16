@@ -46,7 +46,7 @@ for line in iter(process.stdout.readline, b''):
 # This is the bash script that will be run in jail. 
 # Copy to inside to jail
 
-source_of_script = (os.path.join(str(home) + '/hw_one' + '/bash_script.sh')  
+source_of_script = os.path.join(str(home) + '/ceng2034_os_labs/hw_one' + '/bash_script.sh') 
 target_of_script = os.path.join(str(home) + '/jail' + '/bash_script.sh')
 copyfile(source_of_script, target_of_script)
 

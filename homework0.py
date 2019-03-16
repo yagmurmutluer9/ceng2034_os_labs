@@ -28,7 +28,7 @@ counter = 0
 
 for file in os.listdir("."):
     if file.endswith(".txt"):
-        print(os.path.join(root, file))
+        print(os.path.join('/os_lab_0', file))
         counter+=1
 
 print('\ntotal number of ".txt" files found: %d' % counter)
