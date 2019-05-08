@@ -1,0 +1,15 @@
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+
+menuentry "Enter to Wonderland" { 
+set isopath="home/ymutluer16/yagmurmutluer.iso"
+
+echo "Booting ${isopath}..."
+loopback loop(hd0,1)$isopath
+linux (loop)/casper/vmlinux.efi boot=casper iso-scan/filename=${isofile} quiet 
+splash initrd (loop)/casper/initrd.lz
+}
+
